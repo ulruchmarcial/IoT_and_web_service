@@ -50,4 +50,6 @@ CSS Grid écrit par l'équipe (aucun gabarit externe).
 
 ## Équipe
 
-<!-- Noms et codes permanents -->
+- Ngoment Ulruch Marcial
+- Nya Yatat Frank Armand
+- Agossou Fulbert
