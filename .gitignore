@@ -1,0 +1,13 @@
+# Dépendances (recréées avec npm install)
+node_modules/
+
+# Copies de travail à la racine (les versions officielles sont dans backend/)
+/capteurs.js
+/dht11.py
+/serveur.js
+
+# Divers
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/

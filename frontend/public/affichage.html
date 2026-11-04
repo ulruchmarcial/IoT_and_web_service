@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Station météo — GTI700 Labo 1</title>
+  <link rel="stylesheet" href="/static/affichage.css">
+</head>
+<body>
+  <header>
+    <h1>Station météo IoT</h1>
+    <p class="etat">
+      <span id="indicateur" class="pastille"></span>
+      <span id="etat-texte">Connexion…</span>
+    </p>
+  </header>
+
+  <!-- Bandeau d'erreur (caché si tout va bien) -->
+  <div id="erreur" class="erreur" hidden></div>
+
+  <main class="colonnes">
+    <!-- Colonne 1 : température -->
+    <section class="colonne" id="col-temp">
+      <h2>Température</h2>
+      <div class="mesures">
+        <div class="carte">
+          <span class="etiquette">Valeur actuelle</span>
+          <span class="valeur" id="temp-actuelle">--</span>
+        </div>
+        <div class="carte">
+          <span class="etiquette">Moyenne (30 dernières)</span>
+          <span class="valeur" id="temp-moyenne">--</span>
+        </div>
+      </div>
+      <div class="graphique"><canvas id="temp-graphique"></canvas></div>
+      <h3>Historique (30 dernières valeurs)</h3>
+      <div class="tableau-conteneur">
+        <table>
+          <thead><tr><th>Date et heure</th><th>Température (°C)</th></tr></thead>
+          <tbody id="temp-tableau"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Colonne 2 : humidité -->
+    <section class="colonne" id="col-hum">
+      <h2>Humidité</h2>
+      <div class="mesures">
+        <div class="carte">
+          <span class="etiquette">Valeur actuelle</span>
+          <span class="valeur" id="hum-actuelle">--</span>
+        </div>
+        <div class="carte">
+          <span class="etiquette">Moyenne (30 dernières)</span>
+          <span class="valeur" id="hum-moyenne">--</span>
+        </div>
+      </div>
+      <div class="graphique"><canvas id="hum-graphique"></canvas></div>
+      <h3>Historique (30 dernières valeurs)</h3>
+      <div class="tableau-conteneur">
+        <table>
+          <thead><tr><th>Date et heure</th><th>Humidité (%)</th></tr></thead>
+          <tbody id="hum-tableau"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Mise en page deux colonnes : CSS Grid, écrite par l'équipe (aucun gabarit externe).</footer>
+
+  <script src="/static/chart.umd.min.js"></script>
+  <script src="/static/affichage.js"></script>
+</body>
+</html>

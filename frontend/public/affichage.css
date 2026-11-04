@@ -1,0 +1,75 @@
+/* affichage.css — mise en page deux colonnes (CSS Grid) */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  background: #f3f5f8;
+  color: #1d2733;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #1d2733;
+  color: #fff;
+}
+header h1 { margin: 0; font-size: 1.4rem; }
+.etat { margin: 0; display: flex; align-items: center; gap: 8px; font-size: .9rem; }
+.pastille { width: 10px; height: 10px; border-radius: 50%; background: #999; }
+.pastille.ok { background: #2ecc71; }
+.pastille.ko { background: #e74c3c; }
+
+.erreur {
+  margin: 16px 24px 0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  color: #a8261b;
+  font-weight: 600;
+}
+
+/* Deux colonnes égales ; une seule colonne sur écran étroit */
+.colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+@media (max-width: 800px) {
+  .colonnes { grid-template-columns: 1fr; }
+}
+
+.colonne {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+  min-width: 0;
+}
+.colonne h2 { margin-top: 0; }
+#col-temp h2 { color: #d35400; }
+#col-hum h2 { color: #2471a3; }
+
+.mesures { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.carte {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3f5f8;
+}
+.etiquette { font-size: .8rem; color: #5b6775; }
+.valeur { font-size: 2rem; font-weight: 700; }
+
+.graphique { position: relative; height: 260px; margin: 20px 0; }
+
+.tableau-conteneur { max-height: 320px; overflow-y: auto; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid #e3e7ec; }
+th { position: sticky; top: 0; background: #fff; }
+
+footer { padding: 0 24px 24px; font-size: .8rem; color: #5b6775; }
