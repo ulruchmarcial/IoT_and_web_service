@@ -16,7 +16,7 @@ au moyen d'un service web Node.js/Express (back-end) et d'une page web (front-en
 ```bash
 cd backend
 npm install
-node capteurs.js     # tâche 1.1 : affiche les lectures dans la console
+node capteurs.js     # tâche 1.1 : afficher les lectures dans la console
 node serveur.js      # API sur le port 8080
 ```
 

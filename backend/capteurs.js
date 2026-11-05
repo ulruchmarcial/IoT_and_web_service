@@ -17,7 +17,7 @@ const historiques = { temp: [], hum: [] };
 const abonnes = [];      // fonctions appelées à chaque nouvelle lecture
 let processus = null;
 
-// "2026/11/04 15:43:07" (heure locale)
+// "2026/11/04 15:43:07" (heure locale).
 function horodatage(d = new Date()) {
   const p = (x) => String(x).padStart(2, '0');
   return `${d.getFullYear()}/${p(d.getMonth() + 1)}/${p(d.getDate())} ` +
